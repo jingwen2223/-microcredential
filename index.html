@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jingwen Guan - Activity 7</title>
+      <link rel="stylesheet" href="templates/modal.css" type="text/css">
+
+  </head>
+  <body>
+      <form action="templates/checkout.html" method="post">
+    <h1 class="title">Modal Window</h1>
+    <a href="#openModal" class="link">Click Here</a>
+    <div class="modalWindow" id="openModal">
+      <section class="content">
+        <a class="close" href="#">&#10005;</a>
+
+        <section class="info">
+            <img src="templates/lotion.JFIF" alt="Body Lotion">
+            <div class="p">Baby Body Lotion<br> <i>Super Smooth Baby Lotion</i>
+
+          <hr>Hibiscus Morning Bloom Extract plus our exclusive
+Moringa Extract. Lift your beauty to new heights.
+
+        <hr>
+        <span> $13.5 </span><b> Now $3.25 </b>
+        <!-- <a href="#" class="add">ADD TO BAG</a> -->
+      <hr>
+ <input type="submit" value="ADD TO CART" onclick="passvalue();" class="add"></input>
+
+        </div>
+
+        </section>
+      </section>
+
+
+
+    </div>
+
+
+    </form>
+    <script type="text/javascript">
+    function passvalue(){
+      let prdName='Body Lotion';
+      let price = 3.45;
+      localStorage.setItem('product_name',prdName);
+        localStorage.setItem('product_price',price);
+      return false;
+    }
+      console.log("Hello World!");
+      console.log(23);
+      var msg1;
+      msg1="Good morning";
+      console.log(msg1);
+      var msg2 ="Good bye!"
+      var msg3 ="Hi"
+      console.log(msg2);
+      console.log(msg1 + " in between " +msg2+ "one more" + msg3);
+      console.log(`${msg1} in between ${msg2} one more ${msg3}`);
+      console.log("WEEK 2 - ACTIVITY 1");
+
+      var firstName ="Jingwen"
+      var lastName = "Guan"
+      console.log(`${firstName}`);
+      console.log(`${lastName}`);
+      console.log(firstName +" "+ lastName);
+      console.log(`Software Engineering bootcamp, student's name: ${firstName} ${lastName} are studying javascript today!`);
+    </script>
+  </body>
+</html>

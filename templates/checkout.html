@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+
+    <form action="{{url_for('thankyou')}}" method="POST">
+      <fieldset style="width:60%;">
+        <legend>CHECKOUT</legend>
+        <label>Items in your bag</label>
+          <p id='pName'></p>
+          <p id='pPrice'></p>
+
+        <script type="text/javascript">
+          let pName = document.querySelector('#pName');
+          let pPrice = document.querySelector('#pPrice')
+          pName.innerHTML = localStorage.getItem('product_name');
+            pPrice.innerHTML = localStorage.getItem('product_price');
+        </script>
+        <label for="userName">Enter userName <input type="text" name="usrName" placeholder="Type your name.."></label>
+        <label for="email">Enter email address: <input type="text" name="email" placeholder="Type your email address..."></label>
+        <input type="submit" value="Check Out" style="margin-top:2em;"></input>
+      </fieldset>
+
+
+    </form>
+  </body>
+</html>
